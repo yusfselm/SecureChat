@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // Deliberately no "DOM" and no "node" types: crypto-core must stay pure
+    // so the same code runs in the browser and in Node tests.
+    "lib": ["ES2022"],
+    "types": []
+  },
+  "include": ["src", "test"]
+}

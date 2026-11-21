@@ -1,0 +1,25 @@
+{
+  "name": "securechat",
+  "private": true,
+  "version": "0.1.0",
+  "description": "SecureChat – authenticated end-to-end encrypted messaging (Applied Cryptography term project, Group 2)",
+  "type": "module",
+  "workspaces": [
+    "packages/crypto-core",
+    "packages/protocol",
+    "packages/server",
+    "packages/client",
+    "packages/experiments"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w @securechat/server",
+    "dev:client": "npm run dev -w @securechat/client",
+    "test": "npm run test --workspaces --if-present",
+    "experiments": "npm run test -w @securechat/experiments"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.0"
+  }
+}

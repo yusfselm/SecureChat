@@ -1,0 +1,29 @@
+{
+  "name": "@securechat/server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SecureChat server: accounts, sessions, public-key directory, authorization, encrypted message relay. Never sees plaintext or private keys.",
+  "type": "module",
+  "exports": {
+    ".": "./src/app.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/websocket": "^11.1.0",
+    "@securechat/protocol": "*",
+    "argon2": "^0.43.0",
+    "better-sqlite3": "^12.2.0",
+    "fastify": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "tsx": "^4.20.0"
+  }
+}
