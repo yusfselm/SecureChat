@@ -15,7 +15,7 @@ describe("shared constants", () => {
   });
 
   it("all string labels are unique", () => {
-    const labels = Object.values(constants).filter((v): v is string => typeof v === "string");
+    const labels = (Object.values(constants) as unknown[]).filter((v): v is string => typeof v === "string");
     expect(new Set(labels).size).toBe(labels.length);
   });
 });
